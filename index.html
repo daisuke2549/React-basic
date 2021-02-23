@@ -13,13 +13,44 @@
   <script type="text/babel">
     (() => {
 
-      function showMessage(){
-           alert('React勉強中?')
-      }
+
+        // function Counter(props) {
+      
+    //     function countUp(e, color) {
+    //       e.preventDefault();
+    //       alert(color);
+    //     }
+       
+
+    //     return ( <li style={{backgroundColor:props.color}}>
+    //         <a href="#" onClick={e => countUp(e, props.color)}>
+    //           0
+    //         </a>
+    //       </li>
+    //     );
+    //   }
+
+
+    class Counter extends React.Component {
+        render(){
+            return(
+                <li style={{backgroundColor:this.props.color}}>
+                0
+            </li>
+
+            );
+        }
+    }
+
 
       ReactDOM.render(   
-        <div style ={{width:100, height:100, backgroundColor: 'tomato'}} onClick = {showMessage} >
-        </div>,
+    <div className="container">
+     <ul>
+      <Counter color = "tomato"/>
+      <Counter color = "skyblue"/>
+      <Counter color="limegreen"/>
+    </ul>
+    </div>,
         document.getElementById('root')
       );
     })();
