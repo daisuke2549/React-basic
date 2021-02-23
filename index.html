@@ -13,13 +13,12 @@
   <script type="text/babel">
     (() => {
 
-      const name = 'taguchi';
-      ReactDOM.render(
-    
-        <div>
-        <p>Hello! {name.toUpperCase()}</p>
-        <hr/>
-        <p>Hello</p><p>World</p>
+      function showMessage(){
+           alert('React勉強中?')
+      }
+
+      ReactDOM.render(   
+        <div style ={{width:100, height:100, backgroundColor: 'tomato'}} onClick = {showMessage} >
         </div>,
         document.getElementById('root')
       );
